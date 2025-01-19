@@ -15,7 +15,8 @@
 ##   - robot            :   starts up robot nodes
 ##   - samples          :   starts up sample nodes for reference
 
-# ACTIVE_MODULES=""
+ACTIVE_MODULES="robot gazebo vis_tools"
+
 
 ################################# MODE OF OPERATION #################################
 ## Possible modes of operation when running watod.
@@ -23,19 +24,19 @@
 ##	 - deploy (default)		:	runs production-grade containers (non-editable)
 ##	 - develop   		    :	runs developer containers (editable)
 
-# MODE_OF_OPERATION=""
+MODE_OF_OPERATION="develop"
 
 ############################## ADVANCED CONFIGURATIONS ##############################
 ## Name to append to docker containers. DEFAULT = "<your_watcloud_username>"
-# COMPOSE_PROJECT_NAME=""
+COMPOSE_PROJECT_NAME="s77shah"
 
 ## Tag to use. Images are formatted as <IMAGE_NAME>:<TAG> with forward slashes replaced with dashes.
 ## DEFAULT = "<your_current_github_branch>"
-# TAG=""
+TAG="main"
 
-# Docker Registry to pull/push images. DEFAULT = "ghcr.io/watonomous/wato_monorepo"
-# REGISTRY_URL=""
+## Docker Registry to pull/push images. DEFAULT = "ghcr.io/watonomous/wato_monorepo"
+REGISTRY_URL="ghcr.io/watonomous/wato_monorepo"
 
 ## Platform in which to build the docker images with. 
 ## Either arm64 (apple silicon, raspberry pi) or amd64 (most computers)
-# PLATFORM="amd64"
+PLATFORM="arm64"

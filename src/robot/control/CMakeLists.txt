@@ -46,4 +46,21 @@ install(DIRECTORY
   config
   DESTINATION share/${PROJECT_NAME})
 
+  find_package(nav_msgs REQUIRED)       # For Path and Odometry messages
+  find_package(geometry_msgs REQUIRED)  # For Twist and Pose messages
+  
+  # Add dependencies
+  ament_target_dependencies(control_lib
+    rclcpp
+    nav_msgs
+    geometry_msgs
+  )
+  
+  ament_target_dependencies(control_node
+    rclcpp
+    nav_msgs
+    geometry_msgs
+  )
+  
+
 ament_package()
